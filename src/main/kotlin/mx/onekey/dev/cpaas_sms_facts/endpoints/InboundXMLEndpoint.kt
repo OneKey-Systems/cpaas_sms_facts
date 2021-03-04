@@ -26,7 +26,7 @@ class InboundXMLEndpoint(val randomFactRepository: RandomFactRepository) {
 
     @PostMapping("/sms",
             consumes = [MediaType.APPLICATION_FORM_URLENCODED_VALUE],
-            produces = [MediaType.TEXT_XML_VALUE])
+            produces = [MediaType.TEXT_XML_VALUE, MediaType.APPLICATION_XML_VALUE])
     fun processSms(@RequestParam postBody: Map<String, String>): Response {
         return ZangInboundXml.builder()
                 .sms(
@@ -38,7 +38,7 @@ class InboundXMLEndpoint(val randomFactRepository: RandomFactRepository) {
 
     @PostMapping("/call",
             consumes = [MediaType.APPLICATION_FORM_URLENCODED_VALUE],
-            produces = [MediaType.TEXT_XML_VALUE])
+            produces = [MediaType.TEXT_XML_VALUE, MediaType.APPLICATION_XML_VALUE])
     fun processCall(@RequestParam postBody: Map<String, String>): Response {
         return ZangInboundXml.builder()
                 .say(
