@@ -3,8 +3,10 @@ package mx.onekey.dev.cpaas_sms_facts.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "random_facts")
 public class RandomFact {
 
     @Id
