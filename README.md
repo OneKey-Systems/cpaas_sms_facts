@@ -45,5 +45,7 @@ The fact that our Spring server is sitting behind Nginx also helps debugging sin
 did not have to worry about decrypting them, since they were all http instead of https (no sense in using http for packets sent to the loopback interface
 since they don't ever leave the computer).
 
+EDIT: [ngrok](https://ngrok.com/) is a good alternative. It allows you to access your local computer from a public URL. Letting your access a server running in your IDE from the outside, making debugging very easy.
+
 # Feedback
 If you have any comments or feedback feel free to share them with us, we are always interested in hearing from others using Avaya technologies!
